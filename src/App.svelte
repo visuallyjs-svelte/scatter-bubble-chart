@@ -11,9 +11,9 @@
                 <div class="vjs-chart-example-comments">{chart.comments}</div>
             {/if}
             {#if chart.type === 'scatter'}
-                <ScatterChartComponent className="vjs-chart-example-container" options={chart.options} />
+                <ScatterChartComponent className="vjs-chart-example-container" options={chart.options.config} url={chart.options.url}/>
             {:else if chart.type === 'bubble'}
-                <BubbleChartComponent className="vjs-chart-example-container" options={chart.options} />
+                <BubbleChartComponent className="vjs-chart-example-container" options={chart.options.config} url={chart.options.url} />
             {/if}
         </div>
     {/each}
